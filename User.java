@@ -113,6 +113,9 @@ import javax.print.attribute.standard.MediaSize.Other;
     /** Checks is this user is a friend of the other user.
      *  (if two users follow each other, they are said to be "friends.") */
     public boolean isFriendOf(User other) {
+    if (this.follows(other.getName()) && other.follows(this.name)){
+        return true;
+    }
         //// Replace the following statement with your code
         return false;
     }
