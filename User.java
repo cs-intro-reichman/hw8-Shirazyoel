@@ -1,3 +1,5 @@
+import javax.print.attribute.standard.MediaSize.Other;
+
 /** Represents a user in a social network. A user is characterized by a name,
  *  a list of user names that s/he follows, and the list's size. */
  public class User {
@@ -93,11 +95,19 @@
     /*  Notice: This is the size of the intersection of the two follows lists. */
     public int countMutual(User other) {
          //// Replace the following statement with your code
-         /// 
          
-     
+         int countMutual = 0;
+         for (int i = 0; i < other.fCount; i++){
+            for (int j = 0; j < this.fCount; j++){
+                if (other.follows[i].equals(this.follows[j])){
+                    countMutual++;
+                    break;
+                }
+            }
+
+         }
          
-        return 0;
+        return countMutual;
     }
 
     /** Checks is this user is a friend of the other user.
