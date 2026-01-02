@@ -57,17 +57,19 @@
         if (this.follows.length == 0){
             return false;
         }
-          if (this.follows.length == maxfCount){
+          if (this.fCount == maxfCount){
             return false;
         }
-        for ( int i = 0; i < this.fCount; i++ ){
+
          follows[this.fCount] = name; 
          this.fCount++;
-        }
+
+         return true;
+
                 
-        //// Replace the following statement with your code
-        return false;
+        //// Replace the following statement with your code;
     }
+    
 
     /** Removes the given name from the follows list of this user. If successful, returns true.
      *  If the name is not in the list, does nothing and returns false. */
