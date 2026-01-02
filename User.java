@@ -61,7 +61,7 @@
             return false;
         }
         if (follows(name)) {
-        return true;
+        return false;
             
         }
 
