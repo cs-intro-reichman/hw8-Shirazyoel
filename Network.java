@@ -46,8 +46,15 @@ public class Network {
     *  If the given name is already a user in this network, does nothing and returns false;
     *  Otherwise, creates a new user with the given name, adds the user to this network, and returns true. */
     public boolean addUser(String name) {
-        //// Replace the following statement with your code
+        if (users.length == userCount){
+            return false;
+        }
+        if (getUser(name) != null) {
         return false;
+        }
+         users[userCount] = new User(name);; 
+         userCount++;
+         return true;
     }
 
     /** Makes the user with name1 follow the user with name2. If successful, returns true.
