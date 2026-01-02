@@ -60,8 +60,8 @@
         if (this.fCount == maxfCount){
             return false;
         }
-        if (follows(name)) {
-        return false;
+        if (this.follows(name)) {
+        return true;
             
         }
 
