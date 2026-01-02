@@ -54,20 +54,14 @@
     /** Makes this user follow the given name. If successful, returns true. 
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
     public boolean addFollowee(String name) {
-        if (this.follows.length == 0){
-            return false;
-        }
         if (this.fCount == maxfCount){
             return false;
         }
-        if (this.follows(name)) {
-        return true;
-            
+        if (follows(name)) {
+        return false;
         }
-
          follows[this.fCount] = name; 
          this.fCount++;
-
          return true;
 
                 
