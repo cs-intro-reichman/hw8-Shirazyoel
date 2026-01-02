@@ -107,10 +107,21 @@ public class Network {
     /** Computes and returns the name of the most popular user in this network: 
      *  The user who appears the most in the follow lists of all the users. */
     public String mostPopularUser() {
-        //// Replace the following statement with your code
-        
-        return null;
-    }
+        String Most = null;
+        int maxFollowers = -1;
+        for (int i = 0; i < userCount - 1; i++){
+            String currentName = users[i].getName();
+            int currentCount = followeeCount(currentName);
+            
+            if (currentCount > maxFollowers){
+                 Most = currentName;
+                Most = currentName;
+            }
+             
+        }
+        return Most;
+    
+}
 
     /** Returns the number of times that the given name appears in the follows lists of all
      *  the users in this network. Note: A name can appear 0 or 1 times in each list. */
