@@ -109,7 +109,7 @@ public class Network {
     public String mostPopularUser() {
         String Most = null;
         int maxFollowers = -1;
-        for (int i = 0; i < userCount - 1; i++){
+        for (int i = 0; i < userCount; i++){
             String currentName = users[i].getName();
             int currentCount = followeeCount(currentName);
             
@@ -141,17 +141,12 @@ public class Network {
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
        //// Replace the following statement with your code
-       String ans = "Network:";
-
-    for (int i = 0; i < userCount; i++) {
-        ans += users[i].toString();
-
-        if (i < userCount - 1) {
-            ans += "\n";
+       
+        String ans = "Network:";
+        for (int i = 0; i < userCount; i++) {
+            ans += "\n" + users[i].toString();
         }
+        return ans;
     }
-
-    return ans;
-}
 }
        
