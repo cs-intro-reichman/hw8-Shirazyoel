@@ -57,8 +57,12 @@
         if (this.follows.length == 0){
             return false;
         }
-          if (this.fCount == maxfCount){
+        if (this.fCount == maxfCount){
             return false;
+        }
+        if (follows(name)) {
+        return true;
+            
         }
 
          follows[this.fCount] = name; 
