@@ -43,12 +43,28 @@
 
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
+        for (int i = 0; i < this.follows.length ; i++){
+            if (this.follows[i] != null && this.follows[i].equals(name)){
+                return true;
+            }
+        }
         //// Replace the following statement with your code
         return false;
     }
     /** Makes this user follow the given name. If successful, returns true. 
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
     public boolean addFollowee(String name) {
+        if (this.follows.length == 0){
+            return false;
+        }
+          if (this.follows.length == maxfCount){
+            return false;
+        }
+        for ( int i = 0; i < this.fCount; i++ ){
+         follows[this.fCount] = name; 
+         this.fCount++;
+        }
+                
         //// Replace the following statement with your code
         return false;
     }
@@ -56,7 +72,20 @@
     /** Removes the given name from the follows list of this user. If successful, returns true.
      *  If the name is not in the list, does nothing and returns false. */
     public boolean removeFollowee(String name) {
+     
         //// Replace the following statement with your code
+        for ( int i = 0; i < this.fCount; i++ ){
+
+            if (follows[i].equals(name)){
+                for (int j = i ; j < this.fCount - 1; j++){
+                 follows[j] = follows[j + 1];
+                }
+
+                follows[fCount -1] = null;
+                fCount--;   
+                return true;
+            }
+        }
         return false;
     }
 
@@ -64,6 +93,10 @@
     /*  Notice: This is the size of the intersection of the two follows lists. */
     public int countMutual(User other) {
          //// Replace the following statement with your code
+         /// 
+         
+     
+         
         return 0;
     }
 
