@@ -30,7 +30,14 @@ public class Network {
      *  If there is no such user, returns null.
      *  Notice that the method receives a String, and returns a User object. */
     public User getUser(String name) {
+        
+        for (int i = 0; i < this.follows.length ; i++){
+            if ( && users[i].getName().equalsIgnoreCase(name)){
+                return user[i];
+            }
+        }
         //// Replace the following statement with your code
+    
         return null;
     }
 
