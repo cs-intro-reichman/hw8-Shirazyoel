@@ -116,8 +116,16 @@ public class Network {
      *  the users in this network. Note: A name can appear 0 or 1 times in each list. */
     private int followeeCount(String name) {
         //// Replace the following statement with your code
-        return 0;
-    }
+        int FollowName = 0;
+        for (int i = 0; i < userCount; i++){
+
+        if (users[i].follows(name)){
+             FollowName++;
+        }
+     }   
+        return FollowName;
+    
+}
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
