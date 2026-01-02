@@ -115,12 +115,14 @@ public class Network {
             
             if (currentCount > maxFollowers){
                  Most = currentName;
-                Most = currentName;
+                 maxFollowers = currentCount;
+            
             }
-             
+            
         }
         return Most;
     
+
 }
 
     /** Returns the number of times that the given name appears in the follows lists of all
